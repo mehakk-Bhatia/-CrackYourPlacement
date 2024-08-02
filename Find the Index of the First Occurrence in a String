@@ -1,0 +1,9 @@
+class Solution {
+public:
+    int strStr(string haystack, string needle) {
+        int res = -1;
+        res = haystack.find(needle);
+        return res;
+        
+    }
+};
