@@ -1,0 +1,21 @@
+void sortList(Node* head) {
+    int cnt[3] = { 0, 0, 0 };
+    Node* curr = head;
+    while (curr != NULL) {
+        cnt[curr->val] += 1;
+        curr = curr->next;
+    }
+
+    int idx = 0;
+    curr = head;
+    while (curr != NULL) {
+          
+        if (cnt[idx] == 0)
+            idx += 1;
+        else {
+            curr->val = idx;
+            cnt[idx] -= 1;
+            curr = curr->next;
+        }
+    }
+}
